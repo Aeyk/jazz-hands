@@ -9,99 +9,97 @@
 	   (acons 'note '__
 		  (acons 'duration duration 
 			 '()))))
-   ((= (modulo pitch 13) 12) 
+   ((= (modulo pitch 12) 12) 
     (acons 'pitch pitch
 	   (acons 'note 'C'
 		  (acons 'duration duration 
 			 '()))))
-   ((= (modulo pitch 13) 0) 
+   ((= (modulo pitch 12) 0) 
     (acons 'pitch pitch
 	   (acons 'note 'C'
 		  (acons 'duration duration 
 			 '()))))
-   ((= (modulo pitch 13) 2)
+   ((= (modulo pitch 12) 2)
     (acons 'pitch pitch 
 	   (acons 'note 'D'
 		  (acons 'duration duration 
 			 '()))))
-   ((= (modulo pitch 13) 4)
+   ((= (modulo pitch 12) 4)
     (acons 'pitch pitch 
 	   (acons 'note 'E'
 		  (acons 'duration duration 
 			 '()))))
-   ((= (modulo pitch 13) 5)
+   ((= (modulo pitch 12) 5)
     (acons 'pitch pitch 
 	   (acons 'note 'F'
 		  (acons 'duration duration 
 			 '()))))
-   ((= (modulo pitch 13) 7)
+   ((= (modulo pitch 12) 7)
     (acons 'pitch pitch 
 	   (acons 'note 'G'
 		  (acons 'duration duration 
 			 '()))))
-   ((= (modulo pitch 13) 9)
+   ((= (modulo pitch 12) 9)
     (acons 'pitch pitch 
 	   (acons 'note 'A'
 		  (acons 'duration duration 
 			 '()))))
-   ((= (modulo pitch 13) 11)
+   ((= (modulo pitch 12) 11)
     (acons 'pitch pitch 
 	   (acons 'note 'B'
 		  (acons 'duration duration 
 			 '()))))
 
-   ((= (modulo pitch 13) 1)
+   ((= (modulo pitch 12) 1)
     (acons 'pitch pitch
 	   (acons 'note 'Db
 		  (acons 'duration duration 
 			 '()))))
-   ((= (modulo pitch 13) 3)
+   ((= (modulo pitch 12) 3)
     (acons 'pitch pitch 
 	   (acons 'note 'Eb
 		  (acons 'duration duration 
 			 '()))))
-   ((= (modulo pitch 13) 6)
+   ((= (modulo pitch 12) 6)
     (acons 'pitch pitch 
 	   (acons 'note 'Gb
 		  (acons 'duration duration 
 			 '()))))
-   ((= (modulo pitch 13) 8)
+   ((= (modulo pitch 12) 8)
     (acons 'pitch pitch 
 	   (acons 'note 'Ab 
 		  (acons 'duration duration 
 			 '()))))
-   ((= (modulo pitch 13) 10)
+   ((= (modulo pitch 12) 10)
     (acons 'pitch pitch 
 	   (acons 'note 'Bb 
 		  (acons 'duration duration 
-			 '()))))))
-#! 
-  ((= (modulo pitch 13) 1)
+			 '()))))
+  ((= (modulo pitch 12) 1)
    (acons 'pitch pitch
 	  (acons 'note 'Cs
 		 (acons 'duration duration 
 			'()))))
-  ((= (modulo pitch 13) 3)
+  ((= (modulo pitch 12) 3)
    (acons 'pitch pitch 
 	  (acons 'note 'Ds
 		 (acons 'duration duration 
 			'()))))
-  ((= (modulo pitch 13) 6)
+  ((= (modulo pitch 12) 6)
    (acons 'pitch pitch 
 	  (acons 'note 'Fs
 		 (acons 'duration duration 
 			'()))))
-  ((= (modulo pitch 13) 8)
+  ((= (modulo pitch 12) 8)
    (acons 'pitch pitch 
 	  (acons 'note 'Gs 
 		 (acons 'duration duration 
 			'()))))
-  ((= (modulo pitch 13) 10)
+  ((= (modulo pitch 12) 10)
    (acons 'pitch pitch 
 	  (acons 'note 'As 
 		 (acons 'duration duration 
-			'()))))
-!#
+			'()))))))
 
 (define (map-notes notes . flat)
   (map (lambda (n) (make-note n (/ 1 4) flat)) notes))
@@ -116,4 +114,4 @@
   (assoc-ref n 'duration))
 
 (define (get-octave n)
-  (quotient (assoc-ref n 'pitch) 13))
+  (quotient (assoc-ref n 'pitch) 12))

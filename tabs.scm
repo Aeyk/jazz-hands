@@ -5,8 +5,8 @@
 	new
 	(if 
 	 (contains? 
-	  (map (lambda (n) (modulo n 13)) scale)
-	  (modulo (car str) 13))
+	  (map (lambda (n) (modulo n 12)) scale)
+	  (modulo (car str) 12))
 	    (l (cdr str) (cons (car str) new))
 	    (l (cdr str) (cons -1 new))))))
 
@@ -40,4 +40,6 @@
 
 (define (neckboard neckboard scale)
   (map (lambda (n) (map get-note n)) (neckboard scale)))
-]
+
+
+(modulo 13 12)

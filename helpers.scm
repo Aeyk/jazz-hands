@@ -27,9 +27,6 @@
 	seq
 	(loop (- n 1) (cdr (append seq (list (car seq))))))))
 
-(define (map-notes notes . flat)
-  (map (lambda (n) (make-note n (/ 1 4) flat)) notes))
-
 (define (transpose del n)
   (assoc-set! n 'pitch (+ del (get-pitch n))))
 
