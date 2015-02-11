@@ -12,3 +12,6 @@
 (load "./notes.scm")
 (load "./scales.scm")
 (load "./tabs.scm")
+
+
+(n 0)
