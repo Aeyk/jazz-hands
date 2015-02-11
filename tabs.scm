@@ -40,6 +40,3 @@
 
 (define (neckboard neckboard scale)
   (map (lambda (n) (map get-note n)) (neckboard scale)))
-
-
-(modulo 13 12)
