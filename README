@@ -1,0 +1,4 @@
+This is a rudimentary (at the moment ;)) musical theory library. I use it for 
+making guitar and bass tabs for a specific key or chord.
+
+`./jazz-hands.scm | ./format-charts.rb`
