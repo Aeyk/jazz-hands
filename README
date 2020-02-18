@@ -1,7 +1,7 @@
 This is a musical theory library. I use it for 
 making guitar and bass tabs for a specific key or chord.
 
-`./jazz-hands.scm | ./format-charts.rb`
+`./src/jazz-hands.scm | ./src/format-charts.rb`
 
 C_Major
 |--E--|--F--|-----|--G--|-----|--A--|-----|--B--|--C--|-----|--D--|-----|
