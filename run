@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-guile ./src/lispjazz-hand.scm | ./src/format-charts.rb
+guile src/lisp/jazz-hands.scm | ./src/format-charts.rb
 
 
